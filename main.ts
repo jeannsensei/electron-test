@@ -1,4 +1,4 @@
-import { Item } from './src/app/core/models/item.schema';
+import { Item } from './models/item.schema';
 import { app, BrowserWindow, screen, ipcMain } from 'electron';
 import { createConnection } from 'typeorm';
 

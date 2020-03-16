@@ -1,5 +1,5 @@
 import { ElectronService } from './../../core/services/electron/electron.service';
-import { Item } from './../../core/models/item.schema';
+import { Item } from '../../../../models/item.schema';
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { catchError } from 'rxjs/operators';

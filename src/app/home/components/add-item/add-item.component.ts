@@ -1,5 +1,5 @@
 import { HomeService } from './../../services/home.service';
-import { Item } from './../../../core/models/item.schema';
+import { Item } from '../../../../../models/item.schema';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -30,7 +30,13 @@ export class AddItemComponent implements OnInit {
   }
 
   deleteItem(): void {
+    if (this.itemList.length == 0) {
+      return alert('No se puede');
+    }
     const item = this.itemList[this.itemList.length - 1];
-    this._home.deleteItem(item).subscribe(items => (this.itemList = items));
+    this._home.deleteItem(item).subscribe(items => {
+      console.log(item);
+      this.itemList = items;
+    });
   }
 }
